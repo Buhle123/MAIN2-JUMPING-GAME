@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jumping Dino Game</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <main class="game-container">
+        <h1>🦖 Jumping Dino</h1>
+        <p class="instructions">
+            <kbd>Space</kbd> / <kbd>↑</kbd> jump (hold = higher) &nbsp;·&nbsp;
+            <kbd>↓</kbd> duck &nbsp;·&nbsp; <kbd>P</kbd> pause &nbsp;·&nbsp; tap to jump
+        </p>
+
+        <div class="score-board">
+            <span class="badge badge-best">🏆 Best <strong id="best">0</strong></span>
+            <span class="badge badge-score">⭐ Score <strong id="score">0</strong></span>
+            <button id="muteButton" class="icon-button" aria-label="Mute sound" aria-pressed="false">🔊</button>
+        </div>
+
+        <div class="game-wrapper">
+            <canvas id="gameCanvas" width="800" height="300" aria-label="Dino game"></canvas>
+
+            <div id="dino" class="dino" aria-hidden="true">
+                <span class="dino-part dino-spikes"></span>
+                <span class="dino-part dino-body"></span>
+                <span class="dino-part dino-head"></span>
+                <span class="dino-part dino-eye"></span>
+                <span class="dino-part dino-leg dino-leg-a"></span>
+                <span class="dino-part dino-leg dino-leg-b"></span>
+            </div>
+
+            <div id="gameMessage" class="game-message">
+                <h2>Ready to play?</h2>
+                <p>Press SPACE to start!</p>
+                <button id="restartButton">Start Game</button>
+            </div>
+        </div>
+
+        <p class="footer-text">☀️ Day turns to sunset and night as you score. Every 5 points = faster!</p>
+    </main>
+</body>
+</html>
