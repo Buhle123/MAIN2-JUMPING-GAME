@@ -106,7 +106,7 @@ canvas {
     height: auto;
     border: 4px solid var(--ink);
     border-radius: 18px;
-    touch-action: manipulation;
+    touch-action: none;
 }
 
 .game-message {
@@ -260,4 +260,15 @@ button:focus-visible { outline: 3px dashed var(--pink); outline-offset: 3px; }
     .score-board { font-size: 0.95rem; gap: 8px; }
     .badge { padding: 2px 10px; }
     .instructions { font-size: 0.9rem; }
+}
+
+#gameStatus { margin-top: 16px; line-height: 1.5; }
+
+@media (max-width: 600px) {
+    body { padding: 12px; }
+    .score-board { flex-wrap: wrap; justify-content: center; }
+    .game-message { gap: 5px; padding: 8px; }
+    .game-message h2 { font-size: 1.2rem; }
+    .game-message p { font-size: 0.85rem; }
+    .game-message button { padding: 5px 14px; font-size: 1rem; }
 }
